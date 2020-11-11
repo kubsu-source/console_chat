@@ -1,8 +1,6 @@
 #print messages when the len of mess is too big
 #if len>x ==== if len(mess_text[0])+len(' '+myName+' > ')<=read.window_x:
 #shift+letter and shift+special key (page up & etc.) ==== elif key=='shift' or key=='alt' or key=='ctrl':
-#Yyb2jyLr
-#0CYXA2H5
 
 '''
 пользователи ключ=стандартный
