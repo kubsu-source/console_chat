@@ -357,15 +357,14 @@ class Reading(Thread):
 	def translate(self,message):
 		if LANGUAGE[language]=='English':
 			return message
-		else:
-			message=message.copy()
-			message[encode_str('name')]=encode_str(notif_dictionary['SYSTEM'][language])
-			text=decode_str(message[encode_str('text')])
-			for k in notif_dictionary:
-				if k in text:
-					text=text.replace(k,notif_dictionary[k][language])
-					break
-			message[encode_str('text')]=encode_str(text)
+		message=message.copy()
+		message[encode_str('name')]=encode_str(notif_dictionary['SYSTEM'][language])
+		text=decode_str(message[encode_str('text')])
+		for k in notif_dictionary:
+			if k in text:
+				text=text.replace(k,notif_dictionary[k][language])
+				break
+		message[encode_str('text')]=encode_str(text)
 		return message
 
 
